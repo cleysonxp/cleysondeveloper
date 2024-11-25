@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Skills</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black min-h-screen flex items-center justify-center text-white">
+
+  <div class="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg text-center text-black">
+    <h2 class="text-3xl font-bold mb-6 text-blue-600">Minhas Skills</h2>
+    
+    <!-- Botões das categorias -->
+    <div class="flex justify-center space-x-4 border-b-2 border-blue-600 pb-4">
+      <button class="tab-btn active-tab" onclick="showTab('front')">Front-end</button>
+      <button class="tab-btn" onclick="showTab('back')">Back-end</button>
+      <button class="tab-btn" onclick="showTab('db')">Banco de Dados</button>
+    </div>
+
+    <!-- Conteúdo das Skills -->
+    <div id="front" class="tab-content">
+      <ul class="grid grid-cols-2 gap-4 mt-6">
+        <li class="skill-item">HTML</li>
+        <li class="skill-item">CSS</li>
+        <li class="skill-item">JavaScript</li>
+        <li class="skill-item">React</li>
+        <li class="skill-item">Vue.js</li>
+      </ul>
+    </div>
+
+    <div id="back" class="tab-content hidden">
+      <ul class="grid grid-cols-2 gap-4 mt-6">
+        <li class="skill-item">PHP</li>
+        <li class="skill-item">C#</li>
+        <li class="skill-item">.NET</li>
+        <li class="skill-item">Java</li>
+        <li class="skill-item">Spring Boot</li>
+      </ul>
+    </div>
+
+    <div id="db" class="tab-content hidden">
+      <ul class="grid grid-cols-2 gap-4 mt-6">
+        <li class="skill-item">MySQL</li>
+        <li class="skill-item">PostgreSQL</li>
+        <li class="skill-item">MongoDB</li>
+        <li class="skill-item">SQL Server</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      // Esconde todas as abas
+      document.querySelectorAll('.tab-content').forEach((content) => {
+        content.classList.add('hidden');
+      });
+
+      // Remove a classe 'active-tab' de todos os botões
+      document.querySelectorAll('.tab-btn').forEach((btn) => {
+        btn.classList.remove('active-tab');
+      });
+
+      // Mostra a aba selecionada e adiciona a classe ativa ao botão correspondente
+      document.getElementById(tabId).classList.remove('hidden');
+      event.target.classList.add('active-tab');
+    }
+  </script>
+
+  <style>
+    /* Estilos para os botões */
+    .tab-btn {
+      @apply px-4 py-2 text-black bg-gray-100 border border-blue-600 font-medium rounded transition;
+    }
+    .tab-btn:hover {
+      @apply bg-blue-600 text-white;
+    }
+    .active-tab {
+      @apply bg-blue-600 text-white;
+    }
+
+    /* Estilos para os itens das Skills */
+    .skill-item {
+      @apply p-3 bg-blue-50 rounded shadow text-blue-700 font-medium transition;
+    }
+    .skill-item:hover {
+      @apply bg-blue-600 text-white;
+    }
+
+    /* Esconde os conteúdos não ativos */
+    .hidden {
+      @apply hidden;
+    }
+
+    /* Fundo branco para os cards */
+    .tab-content {
+      @apply mt-4 bg-white rounded-lg p-4 text-black shadow-md;
+    }
+  </style>
+
+</body>
+</html>
