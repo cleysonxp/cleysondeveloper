@@ -478,7 +478,7 @@ span {
     margin: auto;
 }
 
-/* SKILLS */
+/* SKILLS ************************************************************************************************* */
 .skills {
     padding: 10rem 12%;
     background-color: var(--second-bg-color);
@@ -588,7 +588,7 @@ span {
     color: black;
 }
 
-/* FOOTER */
+/* FOOTER ************************************************************************************************* */
 .footer {
     position: relative;
     bottom: 0;
@@ -655,7 +655,7 @@ span {
     color: white;
 }
 
-/* RESPONSIVIDADE */
+/* RESPONSIVIDADE ************************************************************************************************* */
 
 @media(max-width:1285px) {
     html {
@@ -773,4 +773,22 @@ span {
     .services-container {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .btn-all{
+        display: none;
+    }
+
+    /* Ajusta os outros botões para ficarem em duas linhas */
+    .btn-group {
+        display: grid; /* Troca flex por grid */
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+        gap: 10px; /* Espaço entre os botões */
+    }
+
+    /* Ajusta tamanho dos botões (opcional) */
+    .btn-filter {
+        padding: 12px 16px; /* Reduz o padding para ajustar o tamanho */
+        font-size: 1.4rem; /* Ajusta o tamanho da fonte */
+    }
 }
+
