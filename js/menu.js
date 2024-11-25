@@ -27,3 +27,31 @@ document.addEventListener('DOMContentLoaded', () => {
         navbar.classList.toggle('active');
     };
 });
+
+particlesJS('particles-js', {
+    particles: {
+        number: {
+            value: 80,
+            density: {
+                enable: true,
+                value_area: 800
+            }
+        },
+        color: {
+            value: "#00ff51"
+        },
+        shape: {
+            type: "circle",
+        },
+        opacity: {
+            value: 0.5,
+        },
+        size: {
+            value: 3,
+        },
+        move: {
+            enable: true,
+            speed: 3,
+        }
+    }
+});
