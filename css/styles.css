@@ -108,7 +108,7 @@ body {
 }
 
 section {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 10rem 12% 10rem;
 }
 
@@ -352,7 +352,7 @@ span {
 }
 
 .education {
-    padding: 100px 15px;
+    padding: 20px 15px;
     background: var(--second-bg-color);
 }
 
@@ -366,6 +366,7 @@ span {
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    padding-bottom: 40px;
 }
 
 .timeline-items::before {
@@ -448,6 +449,7 @@ span {
 .services {
     background: var(--bg-color);
     color: black;
+    padding: 20px  12% 10rem;
 }
 
 .services h2 {
@@ -464,7 +466,8 @@ span {
 
 .service-box {
     background-color: var(--main-color);
-    height: 300px;
+    min-height: 300px;
+    height: a;
     border-radius: 3rem;
     border: 5px solid transparent;
     cursor: pointer;
@@ -504,7 +507,8 @@ span {
 
 /* SKILLS ************************************************************************************************* */
 .skills {
-    padding: 10rem 12%;
+    /* padding: 10rem 12%; */
+    padding: 20px  12% 10rem;
     background-color: var(--second-bg-color);
 }
 
