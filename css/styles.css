@@ -449,7 +449,7 @@ span {
 .services {
     background: var(--bg-color);
     color: black;
-    padding: 20px  12% 10rem;
+    padding: 20px  12% 1;
 }
 
 .services h2 {
