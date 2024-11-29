@@ -16,6 +16,8 @@
     --main-color: rgba(0, 255, 81, 0.8);
 }
 
+.teste{display: none; width: 40px; height: 40px;}
+
 
 ::-webkit-scrollbar {
     width: 15px;
@@ -467,7 +469,7 @@ span {
 .service-box {
     background-color: var(--main-color);
     min-height: 300px;
-    height: a;
+    height: auto;
     border-radius: 3rem;
     border: 5px solid transparent;
     cursor: pointer;
@@ -485,7 +487,7 @@ span {
     display: flex;
     flex-direction: column;
     text-align: left;
-    max-height: 200px;
+    min-height: 200px;
     justify-content: left;
     align-items: baseline;
     padding: 5rem 5rem;
@@ -497,10 +499,16 @@ span {
     line-height: 2;
 }
 
+.service-info h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 2;
+}
+
 .service-info p {
     font-size: 1.6rem;
     font-weight: 600;
-    max-height: 100px;
+    min-height: 100px;
     line-height: 1.7;
     margin: auto;
 }
@@ -695,6 +703,17 @@ span {
         grid-template-columns: repeat(2, 1fr);
         margin: 0 5rem;
     }
+
+    .services-container {
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 5rem;
+    }
+
+    .service-box {
+        min-height: 250px; /* Ajusta altura mínima */
+        padding: 2rem; /* Ajusta padding */
+    }
 }
 
 @media(max-width:991px) {
@@ -738,6 +757,17 @@ span {
 
     .footer {
         padding: 2rem 3%;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr; /* Uma coluna */
+        gap: 2rem; /* Espaçamento entre itens */
+        padding: 0;
+    }
+
+    .service-box {
+        padding: 2rem; /* Ajusta padding */
+        min-height: auto; /* Altura flexível */
     }
 }
 
@@ -806,17 +836,54 @@ span {
         display: none;
     }
 
-    /* Ajusta os outros botões para ficarem em duas linhas */
+    
     .btn-group {
-        display: grid; /* Troca flex por grid */
-        grid-template-columns: repeat(2, 1fr); /* Duas colunas */
-        gap: 10px; /* Espaço entre os botões */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 
-    /* Ajusta tamanho dos botões (opcional) */
     .btn-filter {
-        padding: 12px 16px; /* Reduz o padding para ajustar o tamanho */
-        font-size: 1.4rem; /* Ajusta o tamanho da fonte */
+        padding: 12px 16px;
+        font-size: 1.4rem;
     }
+
+    .services-container{
+        margin: 40px;        
+    }
+
+    .service-box{        
+        padding: 0;
+    }
+
+    .service-box .service-info{
+        min-height: 200px;
+        height: auto;
+        max-height: 1000px;
+        padding: 1px;        
+    }
+
+    .services{
+        padding: 0 0 0 0;        
+        margin: 0;
+    }
+
+    .service-info h4{
+        padding: 10px 0 0 10px;
+        font-size: 2.2rem;
+    }
+
+    .service-info h3{
+        padding: 0 0 0 10px;        
+    }
+
+    .service-info p{
+        padding: 10px;
+    }
+
+    .service-box .service-info{
+        padding: 0;
+    }
+    
 }
 
