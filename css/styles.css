@@ -294,27 +294,27 @@ span {
 
     0%,
     20% {
-        content: "Frontend Designer";
+        content: "Analista de Sistemas";
     }
 
     21%,
     40% {
-        content: "Web Designer";
+        content: "Desenvolvedor de Software";
     }
 
     41%,
     60% {
-        content: "UI / UX Designer";
+        content: "Desenvolvedor Full Stack";
     }
 
     61%,
     80% {
-        content: "Web Developer";
+        content: "Desenvolvedor Back-End";
     }
 
     81%,
     100% {
-        content: "Software Tester";
+        content: "Desenvolvedor Front-End";
     }
 }
 
@@ -360,6 +360,7 @@ span {
 }
 
 .education h2 {
+    margin: 80px;
     margin-bottom: 5rem;
 }
 
@@ -522,6 +523,7 @@ span {
 }
 
 .skills h2 {
+    margin-top: 80px;
     margin-bottom: 5rem;
     color: white;
 }
