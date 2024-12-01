@@ -16,9 +16,6 @@
     --main-color: rgba(0, 255, 81, 0.8);
 }
 
-.teste{display: none; width: 40px; height: 40px;}
-
-
 ::-webkit-scrollbar {
     width: 15px;
 }
@@ -29,6 +26,10 @@
 
 ::-webkit-scrollbar-track {
     background-color: var(--bg-color);
+}
+
+#teste{
+    display: none;
 }
 
 html {
@@ -449,11 +450,11 @@ span {
     line-height: 22px;
 }
 
-/* Experiência de Trabalho */
+/* Experiência de Trabalho ************************************************************************************************* */
 .services {
     background: var(--bg-color);
     color: black;
-    padding: 20px  12% 1;
+    padding: 20px 12% 1;
 }
 
 .services h2 {
@@ -476,11 +477,12 @@ span {
     border: 5px solid transparent;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    color: var(--text-color);
 }
 
 .service-box:hover {
     background: white;
-    color: black;
+    color: var(--bg-color);
     border: 5px solid var(--main-color);
     transform: scale(1.03);
 }
@@ -518,7 +520,7 @@ span {
 /* SKILLS ************************************************************************************************* */
 .skills {
     /* padding: 10rem 12%; */
-    padding: 20px  12% 10rem;
+    padding: 20px 12% 10rem;
     background-color: var(--second-bg-color);
 }
 
@@ -627,13 +629,100 @@ span {
     color: black;
 }
 
+/* PROJETOS ************************************************************************************************* */
+.projetos {
+    padding: 20px 12% 10rem;
+    background-color: var(--bg-color);
+}
+
+.projetos h2 {
+    margin-top: 80px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.project-card {
+    background-color: var(--main-color);
+    min-height: 300px;
+    border-radius: 2rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+.project-card:hover {
+    background-color: white;
+    color: black;
+    border: 5px solid var(--main-color);
+    transform: scale(1.03);
+}
+
+.project-card:hover .project-button {
+    color: var(--bg-color);
+    background-color: var(--main-color);
+    border-color: white;
+}
+
+
+.project-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.project-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-buttons a {
+    color: var(--text-color);
+}
+
+.project-button {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+
 /* FOOTER ************************************************************************************************* */
 .footer {
     position: relative;
     bottom: 0;
     width: 100%;
     padding: 40px 0;
-    background-color: var(--bg-color);
+    background-color: var(--second-bg-color);
 }
 
 .footer .social {
@@ -714,8 +803,10 @@ span {
     }
 
     .service-box {
-        min-height: 250px; /* Ajusta altura mínima */
-        padding: 2rem; /* Ajusta padding */
+        min-height: 250px;
+
+        padding: 2rem;
+
     }
 }
 
@@ -763,14 +854,35 @@ span {
     }
 
     .services-container {
-        grid-template-columns: 1fr; /* Uma coluna */
-        gap: 2rem; /* Espaçamento entre itens */
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
         padding: 0;
     }
 
     .service-box {
-        padding: 2rem; /* Ajusta padding */
-        min-height: auto; /* Altura flexível */
+        padding: 2rem;
+
+        min-height: auto;
+
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-card {
+        max-width: 100%;
+    }
+
+    .project-title {
+        font-size: 1.8rem;
+    }
+
+    .project-description {
+        font-size: 1.3rem;
     }
 }
 
@@ -835,11 +947,11 @@ span {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .btn-all{
+    .btn-all {
         display: none;
     }
 
-    
+
     .btn-group {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -851,42 +963,68 @@ span {
         font-size: 1.4rem;
     }
 
-    .services-container{
-        margin: 40px;        
+    .services-container {
+        margin: 40px;
     }
 
-    .service-box{        
+    .service-box {
         padding: 0;
     }
 
-    .service-box .service-info{
+    .service-box .service-info {
         min-height: 200px;
         height: auto;
         max-height: 1000px;
-        padding: 1px;        
+        padding: 1px;
     }
 
-    .services{
-        padding: 0 0 0 0;        
+    .services {
+        padding: 0 0 0 0;
         margin: 0;
     }
 
-    .service-info h4{
+    .service-info h4 {
         padding: 10px 0 0 10px;
         font-size: 2.2rem;
     }
 
-    .service-info h3{
-        padding: 0 0 0 10px;        
+    .service-info h3 {
+        padding: 0 0 0 10px;
     }
 
-    .service-info p{
+    .service-info p {
         padding: 10px;
     }
 
-    .service-box .service-info{
+    .service-box .service-info {
         padding: 0;
     }
-    
-}
 
+    .projetos {
+        padding: 10px 5%;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    .project-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .project-button {
+        padding: 8px 15px;
+        font-size: 1.2rem;
+    }
+
+    .education h2{
+        font-size: 5.6rem;
+    }
+
+    #teste{
+        display: block;
+    }
+
+}
